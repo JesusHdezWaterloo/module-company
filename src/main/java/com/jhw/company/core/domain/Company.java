@@ -11,10 +11,10 @@ import javax.validation.constraints.NotEmpty;
 public class Company extends EntityDomainObjectValidated {
 
     @NotEmpty(message = "#msg.company.domain.no_image#")
-    private String image_URL;
+    private String image_URL = "logo.png";
 
     @NotEmpty(message = "#msg.company.domain.no_name#")
-    private String name;
+    private String name = "company name";
 
     public Company() {
     }

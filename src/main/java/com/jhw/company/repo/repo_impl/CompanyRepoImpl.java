@@ -38,7 +38,12 @@ public class CompanyRepoImpl implements CompanyRepo {
      */
     @Override
     public Company read() throws Exception {
-        return JACKSON.read(file, Company.class);
+        try {
+            return JACKSON.read(file, Company.class);
+        } catch (Exception e) {
+            write(new Company());
+        }
+        return new Company();
     }
 
     /**
