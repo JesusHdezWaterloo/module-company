@@ -9,7 +9,6 @@ import com.jhw.swing.material.standars.MaterialIcons;
 import com.jhw.company.core.usecase_def.CompanyUseCase;
 import com.jhw.company.repo.module.CompanyRepoModule;
 import com.jhw.swing.util.AbstractActionUtils;
-import com.jhw.swing.util.icons.DerivableIcon;
 import javax.swing.ImageIcon;
 
 public class CompanySwingModule implements AbstractSwingMainModule {

@@ -16,6 +16,9 @@ public class Company extends EntityDomainObjectValidated {
     @NotEmpty(message = "#msg.company.domain.no_name#")
     private String name;
 
+    public Company() {
+    }
+
     public Company(String image_URL, String name) {
         this.image_URL = image_URL;
         this.name = name;
