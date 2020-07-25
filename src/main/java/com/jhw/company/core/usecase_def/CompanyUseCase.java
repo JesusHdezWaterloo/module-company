@@ -11,7 +11,12 @@ import com.jhw.company.core.domain.Company;
  */
 public interface CompanyUseCase extends ReadWriteUseCase<Company> {
 
-    public String getImageURL() throws Exception;
+    public String getLogoURL() throws Exception;
 
     public String getName() throws Exception;
+
+    public String getIconURL() throws Exception;
+
+    public String getTitle() throws Exception;
+
 }

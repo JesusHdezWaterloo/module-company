@@ -29,13 +29,23 @@ public class CompanyUseCaseImpl extends DefaultReadWriteUseCase<Company> impleme
     }
 
     @Override
-    public String getImageURL() throws Exception {
-        return read().getImage_URL();
+    public String getLogoURL() throws Exception {
+        return read().getLogo_URL();
     }
 
     @Override
     public String getName() throws Exception {
         return read().getName();
+    }
+
+    @Override
+    public String getIconURL() throws Exception {
+        return read().getIcon_URL();
+    }
+
+    @Override
+    public String getTitle() throws Exception {
+        return read().getTitle();
     }
 
 }

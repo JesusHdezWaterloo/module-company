@@ -4,12 +4,6 @@ import com.clean.core.app.services.Notification;
 import com.clean.core.app.services.NotificationsGeneralType;
 import com.clean.core.domain.services.Resource;
 import com.jhw.company.core.domain.Company;
-import com.jhw.utils.jackson.JACKSON;
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
-import java.io.ObjectInputStream;
-import java.io.ObjectOutputStream;
 import javax.inject.Inject;
 import com.jhw.company.core.repo_def.CompanyRepo;
 import com.jhw.utils.jackson.JACKSONRepoGeneral;
@@ -27,7 +21,7 @@ public class CompanyRepoImpl extends JACKSONRepoGeneral<Company> implements Comp
      */
     @Inject
     public CompanyRepoImpl() {
-        super("company.json", Company.class);
+        super("company/company.json", Company.class);
     }
 
     @Override
