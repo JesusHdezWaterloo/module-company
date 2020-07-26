@@ -8,7 +8,7 @@ import com.clean.swing.app.dashboard.DashboardConstants;
 import com.jhw.company.core.module.CompanyCoreModule;
 import com.jhw.company.repo.module.CompanyRepoModule;
 import com.jhw.company.services.CompanyResourceService;
-import com.jhw.company.ui.utils.UIUtils;
+import com.jhw.company.services.CompanyHandler;
 import com.jhw.swing.util.AbstractActionUtils;
 import java.net.MalformedURLException;
 
@@ -39,10 +39,10 @@ public class CompanySwingModule implements AbstractSwingMainModule {
         DashBoardSimple dash = app.rootView().dashboard();
 
         dash.putKeyValue(DashboardConstants.UP_COMPANY,
-                AbstractActionUtils.from(UIUtils.getCompanyName(), UIUtils.getLogo()));
+                AbstractActionUtils.from(CompanyHandler.getCompanyName(), CompanyHandler.getLogo()));
 
-        app.rootView().setIconImage(UIUtils.getIcon());
-        app.rootView().setTitle(UIUtils.getTitle());
+        app.rootView().setIconImage(CompanyHandler.getIcon());
+        app.rootView().setTitle(CompanyHandler.getTitle());
 
     }
 
