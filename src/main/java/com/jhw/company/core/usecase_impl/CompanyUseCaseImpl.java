@@ -1,5 +1,7 @@
 package com.jhw.company.core.usecase_impl;
 
+import com.clean.core.app.usecase.DefaultReadWriteUseCase;
+import com.jhw.company.core.domain.Company;
 import com.jhw.company.core.module.CompanyCoreModule;
 import com.jhw.company.core.repo_def.CompanyRepo;
 import com.jhw.company.core.usecase_def.CompanyUseCase;
@@ -11,7 +13,7 @@ import javax.inject.Inject;
  *
  * @author Jesus Hernandez Barrios (jhernandezb96@gmail.com)
  */
-public class CompanyUseCaseImpl implements CompanyUseCase {
+public class CompanyUseCaseImpl extends DefaultReadWriteUseCase<Company> implements CompanyUseCase {
 
     /**
      * Instancia del repo para almacenar las cosas en memoria
@@ -23,16 +25,27 @@ public class CompanyUseCaseImpl implements CompanyUseCase {
      */
     @Inject
     public CompanyUseCaseImpl() {
+        super.setRepo(repo);
     }
 
     @Override
-    public String getImageURL() throws Exception {
-        return repo.read().getImage_URL();
+    public String getLogoURL() throws Exception {
+        return read().getLogo_URL();
     }
 
     @Override
     public String getName() throws Exception {
-        return repo.read().getName();
+        return read().getName();
+    }
+
+    @Override
+    public String getIconURL() throws Exception {
+        return read().getIcon_URL();
+    }
+
+    @Override
+    public String getTitle() throws Exception {
+        return read().getTitle();
     }
 
 }

@@ -20,7 +20,7 @@ public class CompanyRepoModule extends DefaultAbstractModule {
 
     public static CompanyRepoModule getInstance() {
         if (INSTANCE == null) {
-            throw new NullPointerException("El modulo de Person no se ha inicializado");
+            throw new NullPointerException("El modulo de Company no se ha inicializado");
         }
         return INSTANCE;
     }
@@ -37,7 +37,7 @@ public class CompanyRepoModule extends DefaultAbstractModule {
 
     @Override
     public String getModuleName() {
-        return "Licence Repo Module";
+        return "Company Repo Module";
     }
 
 }

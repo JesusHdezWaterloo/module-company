@@ -1,21 +1,20 @@
 package com.jhw.company.ui.module;
 
+import com.clean.core.app.services.ExceptionHandler;
 import com.clean.swing.app.AbstractSwingApplication;
 import com.clean.swing.app.AbstractSwingMainModule;
 import com.clean.swing.app.dashboard.DashBoardSimple;
 import com.clean.swing.app.dashboard.DashboardConstants;
 import com.jhw.company.core.module.CompanyCoreModule;
-import com.jhw.swing.material.standars.MaterialIcons;
-import com.jhw.company.core.usecase_def.CompanyUseCase;
 import com.jhw.company.repo.module.CompanyRepoModule;
+import com.jhw.company.services.CompanyResourceService;
+import com.jhw.company.services.CompanyHandler;
 import com.jhw.swing.util.AbstractActionUtils;
-import javax.swing.ImageIcon;
+import java.net.MalformedURLException;
 
 public class CompanySwingModule implements AbstractSwingMainModule {
 
     private final CompanyModuleNavigator navigator = new CompanyModuleNavigator();
-
-    public static CompanyUseCase companyUC;
 
     public CompanySwingModule() {
         init();
@@ -23,9 +22,12 @@ public class CompanySwingModule implements AbstractSwingMainModule {
 
     private void init() {
         System.out.println("Creando 'Company'");
-
-        CompanyCoreModule core = CompanyCoreModule.init(CompanyRepoModule.init());
-        companyUC = core.getImplementation(CompanyUseCase.class);
+        try {
+            CompanyResourceService.init();
+        } catch (MalformedURLException ex) {
+            ExceptionHandler.handleException(ex);
+        }
+        CompanyCoreModule.init(CompanyRepoModule.init());
     }
 
     @Override
@@ -36,18 +38,11 @@ public class CompanySwingModule implements AbstractSwingMainModule {
     private void registerLicence(AbstractSwingApplication app) {
         DashBoardSimple dash = app.rootView().dashboard();
 
-        ImageIcon icon = MaterialIcons.BROKEN_IMAGE;
-        try {
-            icon = new ImageIcon(companyUC.getImageURL());
-        } catch (Exception e) {
-        }
-        String name = "Nombre de la Compañía";
-        try {
-            name = companyUC.getName();
-        } catch (Exception e) {
-        }
         dash.putKeyValue(DashboardConstants.UP_COMPANY,
-                AbstractActionUtils.from(name, icon));
+                AbstractActionUtils.from(CompanyHandler.getCompanyName(), CompanyHandler.getLogo()));
+
+        app.rootView().setIconImage(CompanyHandler.getIcon());
+        app.rootView().setTitle(CompanyHandler.getTitle());
 
     }
 

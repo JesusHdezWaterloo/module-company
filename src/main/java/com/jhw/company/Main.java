@@ -21,11 +21,11 @@ public class Main {
      * @param args the command line arguments
      */
     public static void main(String[] args) throws Exception {
-        Company comp = new Company("comp.png", "module-comp");
+        /*Company comp = new Company("comp.png", "module-comp");
 
         CompanyRepoModule repo = CompanyRepoModule.init();
         CompanyRepo companyUC = repo.getImplementation(CompanyRepo.class);
-        companyUC.write(comp);
+        companyUC.write(comp);*/
     }
 
 }
