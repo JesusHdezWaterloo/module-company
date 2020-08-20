@@ -16,18 +16,18 @@ public class CompanySwingModule implements AbstractSwingMainModule {
 
     private final CompanyModuleNavigator navigator = new CompanyModuleNavigator();
 
-    public CompanySwingModule() {
-        init();
+    private CompanySwingModule() {
     }
 
-    private void init() {
-        System.out.println("Creando 'Company'");
+    public static CompanySwingModule init() {
+        System.out.println("Iniciando 'Company'");
         try {
             CompanyResourceService.init();
         } catch (MalformedURLException ex) {
             ExceptionHandler.handleException(ex);
         }
         CompanyCoreModule.init(CompanyRepoModule.init());
+        return new CompanySwingModule();
     }
 
     @Override
