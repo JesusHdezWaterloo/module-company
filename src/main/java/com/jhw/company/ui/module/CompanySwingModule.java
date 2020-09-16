@@ -2,7 +2,7 @@ package com.jhw.company.ui.module;
 
 import com.clean.core.app.services.ExceptionHandler;
 import com.clean.swing.app.AbstractSwingApplication;
-import com.clean.swing.app.AbstractSwingMainModule;
+import com.clean.swing.app.DefaultAbstractSwingMainModule;
 import com.clean.swing.app.dashboard.DashBoardSimple;
 import com.clean.swing.app.dashboard.DashboardConstants;
 import com.jhw.company.core.module.CompanyCoreModule;
@@ -12,22 +12,22 @@ import com.jhw.company.services.CompanyHandler;
 import com.jhw.swing.util.AbstractActionUtils;
 import java.net.MalformedURLException;
 
-public class CompanySwingModule implements AbstractSwingMainModule {
+public class CompanySwingModule extends DefaultAbstractSwingMainModule {
 
     private final CompanyModuleNavigator navigator = new CompanyModuleNavigator();
 
-    public CompanySwingModule() {
-        init();
+    private CompanySwingModule() {
     }
 
-    private void init() {
-        System.out.println("Creando 'Company'");
+    public static CompanySwingModule init() {
+        System.out.println("Iniciando 'Company'");
         try {
             CompanyResourceService.init();
         } catch (MalformedURLException ex) {
             ExceptionHandler.handleException(ex);
         }
         CompanyCoreModule.init(CompanyRepoModule.init());
+        return new CompanySwingModule();
     }
 
     @Override
