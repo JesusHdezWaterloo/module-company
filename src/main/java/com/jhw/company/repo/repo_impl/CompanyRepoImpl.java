@@ -3,7 +3,7 @@ package com.jhw.company.repo.repo_impl;
 import com.clean.core.app.services.Notification;
 import com.clean.core.app.services.NotificationsGeneralType;
 import com.clean.core.domain.services.Resource;
-import com.jhw.company.core.domain.Company;
+import com.jhw.company.core.domain.CompanyDomain;
 import javax.inject.Inject;
 import com.jhw.company.core.repo_def.CompanyRepo;
 import com.jhw.utils.jackson.JACKSONRepoGeneral;
@@ -14,14 +14,14 @@ import com.jhw.utils.jackson.JACKSONRepoGeneral;
  *
  * @author Jesus Hernandez Barrios (jhernandezb96@gmail.com)
  */
-public class CompanyRepoImpl extends JACKSONRepoGeneral<Company> implements CompanyRepo {
+public class CompanyRepoImpl extends JACKSONRepoGeneral<CompanyDomain> implements CompanyRepo {
 
     /**
      * Constructor por defecto, usado para injectar.
      */
     @Inject
     public CompanyRepoImpl() {
-        super("company/company.json", Company.class);
+        super("company/company.json", CompanyDomain.class);
     }
 
     @Override

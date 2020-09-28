@@ -5,7 +5,7 @@
  */
 package com.jhw.company.services;
 
-import com.jhw.company.core.domain.Company;
+import com.jhw.company.core.domain.CompanyDomain;
 import com.jhw.company.core.module.CompanyCoreModule;
 import com.jhw.company.core.usecase_def.CompanyUseCase;
 import com.jhw.utils.others.SemanticVersioningModel;
@@ -18,13 +18,13 @@ import javax.swing.ImageIcon;
  */
 public class CompanyHandler {
 
-    private static Company company;
+    private static CompanyDomain company;
 
     static {
         try {
             company = CompanyCoreModule.getInstance().getImplementation(CompanyUseCase.class).read();
         } catch (Exception e) {
-            company = new Company();
+            company = new CompanyDomain();
         }
     }
 
