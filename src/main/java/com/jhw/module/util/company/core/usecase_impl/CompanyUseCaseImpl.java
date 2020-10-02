@@ -1,10 +1,10 @@
-package com.jhw.company.core.usecase_impl;
+package com.jhw.module.util.company.core.usecase_impl;
 
 import com.clean.core.app.usecase.DefaultReadWriteUseCase;
-import com.jhw.company.core.domain.CompanyDomain;
-import com.jhw.company.core.module.CompanyCoreModule;
-import com.jhw.company.core.repo_def.CompanyRepo;
-import com.jhw.company.core.usecase_def.CompanyUseCase;
+import com.jhw.module.util.company.core.domain.CompanyDomain;
+import com.jhw.module.util.company.core.module.CompanyCoreModule;
+import com.jhw.module.util.company.core.repo_def.CompanyRepo;
+import com.jhw.module.util.company.core.usecase_def.CompanyUseCase;
 import javax.inject.Inject;
 
 /**

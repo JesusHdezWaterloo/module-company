@@ -1,4 +1,4 @@
-package com.jhw.company.repo.module;
+package com.jhw.module.util.company.repo.module;
 
 import com.clean.core.app.modules.DefaultAbstractModule;
 import com.google.inject.Guice;

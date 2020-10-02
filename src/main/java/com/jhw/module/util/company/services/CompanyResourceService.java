@@ -1,4 +1,4 @@
-package com.jhw.company.services;
+package com.jhw.module.util.company.services;
 
 import com.clean.core.domain.services.Resource;
 import com.clean.core.domain.services.ResourceBundleUtils;

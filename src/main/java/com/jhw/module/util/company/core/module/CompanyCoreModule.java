@@ -1,4 +1,4 @@
-package com.jhw.company.core.module;
+package com.jhw.module.util.company.core.module;
 
 import com.clean.core.app.modules.AbstractModule;
 import com.clean.core.app.modules.DefaultAbstractModule;

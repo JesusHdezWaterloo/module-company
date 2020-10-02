@@ -1,8 +1,8 @@
-package com.jhw.company.repo.module;
+package com.jhw.module.util.company.repo.module;
 
-import com.jhw.company.repo.repo_impl.CompanyRepoImpl;
+import com.jhw.module.util.company.repo.repo_impl.CompanyRepoImpl;
 import com.google.inject.AbstractModule;
-import com.jhw.company.core.repo_def.CompanyRepo;
+import com.jhw.module.util.company.core.repo_def.CompanyRepo;
 
 /**
  * Configuracion del injection del modulo de licencia-repo.

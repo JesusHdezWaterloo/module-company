@@ -1,7 +1,7 @@
-package com.jhw.company.core.repo_def;
+package com.jhw.module.util.company.core.repo_def;
 
 import com.clean.core.app.repo.ReadWriteRepository;
-import com.jhw.company.core.domain.CompanyDomain;
+import com.jhw.module.util.company.core.domain.CompanyDomain;
 
 /**
  * Interfaz de Repo para definir el trabajo de almacenamiento de la compania.

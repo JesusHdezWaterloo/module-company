@@ -1,4 +1,4 @@
-package com.jhw.company.ui.module;
+package com.jhw.module.util.company.ui.module;
 
 import com.clean.core.app.services.NavigationService;
 
