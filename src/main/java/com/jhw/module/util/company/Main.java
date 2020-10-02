@@ -3,13 +3,13 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.jhw.company;
+package com.jhw.module.util.company;
 
-import com.jhw.company.core.domain.CompanyDomain;
-import com.jhw.company.core.module.CompanyCoreModule;
-import com.jhw.company.core.repo_def.CompanyRepo;
-import com.jhw.company.core.usecase_def.CompanyUseCase;
-import com.jhw.company.repo.module.CompanyRepoModule;
+import com.jhw.module.util.company.core.domain.CompanyDomain;
+import com.jhw.module.util.company.core.module.CompanyCoreModule;
+import com.jhw.module.util.company.core.repo_def.CompanyRepo;
+import com.jhw.module.util.company.core.usecase_def.CompanyUseCase;
+import com.jhw.module.util.company.repo.module.CompanyRepoModule;
 
 /**
  *

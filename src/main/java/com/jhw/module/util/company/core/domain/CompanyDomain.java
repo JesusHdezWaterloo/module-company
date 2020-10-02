@@ -1,4 +1,4 @@
-package com.jhw.company.core.domain;
+package com.jhw.module.util.company.core.domain;
 
 import com.jhw.utils.clean.EntityDomainObjectValidated;
 import com.jhw.utils.others.SemanticVersioningModel;

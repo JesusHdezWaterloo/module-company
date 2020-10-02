@@ -1,7 +1,7 @@
-package com.jhw.company.core.usecase_def;
+package com.jhw.module.util.company.core.usecase_def;
 
 import com.clean.core.app.usecase.ReadWriteUseCase;
-import com.jhw.company.core.domain.CompanyDomain;
+import com.jhw.module.util.company.core.domain.CompanyDomain;
 
 /**
  * Interfaz del caso de uso de la licencia para definir las principales

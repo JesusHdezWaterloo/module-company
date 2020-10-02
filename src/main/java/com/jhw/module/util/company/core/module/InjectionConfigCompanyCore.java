@@ -1,8 +1,8 @@
-package com.jhw.company.core.module;
+package com.jhw.module.util.company.core.module;
 
 import com.google.inject.AbstractModule;
-import com.jhw.company.core.usecase_impl.CompanyUseCaseImpl;
-import com.jhw.company.core.usecase_def.CompanyUseCase;
+import com.jhw.module.util.company.core.usecase_impl.CompanyUseCaseImpl;
+import com.jhw.module.util.company.core.usecase_def.CompanyUseCase;
 
 /**
  * Configuracion del injection del modulo de licencia-core.

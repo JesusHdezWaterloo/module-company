@@ -1,14 +1,14 @@
-package com.jhw.company.ui.module;
+package com.jhw.module.util.company.ui.module;
 
 import com.clean.core.app.services.ExceptionHandler;
 import com.clean.swing.app.AbstractSwingApplication;
 import com.clean.swing.app.DefaultAbstractSwingMainModule;
 import com.clean.swing.app.dashboard.DashBoardSimple;
 import com.clean.swing.app.dashboard.DashboardConstants;
-import com.jhw.company.core.module.CompanyCoreModule;
-import com.jhw.company.repo.module.CompanyRepoModule;
-import com.jhw.company.services.CompanyResourceService;
-import com.jhw.company.services.CompanyHandler;
+import com.jhw.module.util.company.core.module.CompanyCoreModule;
+import com.jhw.module.util.company.repo.module.CompanyRepoModule;
+import com.jhw.module.util.company.services.CompanyResourceService;
+import com.jhw.module.util.company.services.CompanyHandler;
 import com.jhw.swing.util.AbstractActionUtils;
 import java.net.MalformedURLException;
 
