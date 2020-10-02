@@ -5,14 +5,14 @@ import com.jhw.utils.others.SemanticVersioningModel;
 import javax.validation.constraints.NotEmpty;
 
 /**
- * Objeto dominio Company.
+ * Objeto dominio CompanyDomain.
  *
  * @author Jesus Hernandez Barrios (jhernandezb96@gmail.com)
  */
-public class Company extends EntityDomainObjectValidated {
+public class CompanyDomain extends EntityDomainObjectValidated {
 
     @NotEmpty(message = "#msg.company.domain.no_logo#")
-    private String logo_URL = "logo.png";
+    private String logo_URL = "company/logo.png";
 
     @NotEmpty(message = "#msg.company.domain.no_name#")
     private String name = "company name";
@@ -21,14 +21,14 @@ public class Company extends EntityDomainObjectValidated {
     private String title = "program name";
 
     @NotEmpty(message = "#msg.company.domain.no_icon#")
-    private String icon_URL = "icon.png";
+    private String icon_URL = "company/icon.png";
 
     private SemanticVersioningModel version = new SemanticVersioningModel(0, 0, 0);
 
-    public Company() {
+    public CompanyDomain() {
     }
 
-    public Company(String logo_URL, String name, String title, String icon_URL, SemanticVersioningModel version) {
+    public CompanyDomain(String logo_URL, String name, String title, String icon_URL, SemanticVersioningModel version) {
         this.logo_URL = logo_URL;
         this.name = name;
         this.title = title;

@@ -5,7 +5,7 @@
  */
 package com.jhw.company;
 
-import com.jhw.company.core.domain.Company;
+import com.jhw.company.core.domain.CompanyDomain;
 import com.jhw.company.core.module.CompanyCoreModule;
 import com.jhw.company.core.repo_def.CompanyRepo;
 import com.jhw.company.core.usecase_def.CompanyUseCase;
@@ -21,7 +21,7 @@ public class Main {
      * @param args the command line arguments
      */
     public static void main(String[] args) throws Exception {
-        /*Company comp = new Company("comp.png", "module-comp");
+        /*CompanyDomain comp = new CompanyDomain("comp.png", "module-comp");
 
         CompanyRepoModule repo = CompanyRepoModule.init();
         CompanyRepo companyUC = repo.getImplementation(CompanyRepo.class);
