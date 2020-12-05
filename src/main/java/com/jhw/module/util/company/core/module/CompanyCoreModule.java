@@ -4,6 +4,7 @@ import com.clean.core.app.modules.AbstractModule;
 import com.clean.core.app.modules.DefaultAbstractModule;
 import com.google.inject.Guice;
 import com.google.inject.Injector;
+import com.jhw.module.util.company.repo.module.CompanyRepoModule;
 
 /**
  * Modulo de licencia-core.
@@ -12,7 +13,7 @@ import com.google.inject.Injector;
  */
 public class CompanyCoreModule extends DefaultAbstractModule {
 
-    private final Injector inj = Guice.createInjector(new InjectionConfigCompanyCore());
+    private final Injector inj = Guice.createInjector(new CompanyCoreInjectionConfig());
 
     private static CompanyCoreModule INSTANCE;
 
@@ -23,6 +24,24 @@ public class CompanyCoreModule extends DefaultAbstractModule {
         return INSTANCE;
     }
 
+
+    public static CompanyCoreModule init() {
+        if (INSTANCE != null) {
+            return INSTANCE;
+        }
+        INSTANCE = new CompanyCoreModule();
+        INSTANCE.registerModule(CompanyRepoModule.init());
+        return getInstance();
+    }
+
+    /**
+     * Usar init() sin repo por parametro para usar el repo por defecto
+     *
+     * @param repoModule
+     * @return
+     * @deprecated
+     */
+    @Deprecated
     public static CompanyCoreModule init(AbstractModule repoModule) {
         INSTANCE = new CompanyCoreModule();
         INSTANCE.registerModule(repoModule);

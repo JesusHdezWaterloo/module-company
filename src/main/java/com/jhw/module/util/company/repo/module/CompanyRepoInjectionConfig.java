@@ -9,7 +9,7 @@ import com.jhw.module.util.company.core.repo_def.CompanyRepo;
  *
  * @author Jesus Hernandez Barrios (jhernandezb96@gmail.com)
  */
-public class InjectionConfigCompanyRepo extends AbstractModule {
+public class CompanyRepoInjectionConfig extends AbstractModule {
 
     @Override
     protected void configure() {
