@@ -9,7 +9,7 @@ import com.jhw.module.util.company.core.usecase_def.CompanyUseCase;
  *
  * @author Jesus Hernandez Barrios (jhernandezb96@gmail.com)
  */
-public class InjectionConfigCompanyCore extends AbstractModule {
+public class CompanyCoreInjectionConfig extends AbstractModule {
 
     @Override
     protected void configure() {

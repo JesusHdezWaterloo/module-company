@@ -6,7 +6,6 @@ import com.clean.swing.app.DefaultAbstractSwingMainModule;
 import com.clean.swing.app.dashboard.DashBoardSimple;
 import com.clean.swing.app.dashboard.DashboardConstants;
 import com.jhw.module.util.company.core.module.CompanyCoreModule;
-import com.jhw.module.util.company.repo.module.CompanyRepoModule;
 import com.jhw.module.util.company.services.CompanyResourceService;
 import com.jhw.module.util.company.services.CompanyHandler;
 import com.jhw.swing.util.AbstractActionUtils;
@@ -26,7 +25,7 @@ public class CompanySwingModule extends DefaultAbstractSwingMainModule {
         } catch (MalformedURLException ex) {
             ExceptionHandler.handleException(ex);
         }
-        CompanyCoreModule.init(CompanyRepoModule.init());
+        CompanyCoreModule.init();
         return new CompanySwingModule();
     }
 

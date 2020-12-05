@@ -11,7 +11,7 @@ import com.google.inject.Injector;
  */
 public class CompanyRepoModule extends DefaultAbstractModule {
 
-    private final Injector inj = Guice.createInjector(new InjectionConfigCompanyRepo());
+    private final Injector inj = Guice.createInjector(new CompanyRepoInjectionConfig());
 
     private static CompanyRepoModule INSTANCE;
 
