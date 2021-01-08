@@ -1,6 +1,6 @@
 package com.jhw.module.util.company.core.repo_def;
 
-import com.clean.core.app.repo.ReadWriteRepository;
+import com.root101.clean.core.app.repo.ReadWriteRepository;
 import com.jhw.module.util.company.core.domain.CompanyDomain;
 
 /**

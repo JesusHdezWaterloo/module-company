@@ -1,9 +1,9 @@
 package com.jhw.module.util.company.services;
 
-import com.clean.core.domain.services.Resource;
-import com.clean.core.domain.services.ResourceBundleUtils;
-import com.clean.core.domain.services.ResourceService;
-import com.clean.core.domain.services.DefaultResourceBundleService;
+import com.root101.clean.core.domain.services.ResourceHandler;
+import com.root101.clean.core.domain.services.ResourceBundleUtils;
+import com.root101.clean.core.domain.services.ResourceService;
+import com.root101.clean.core.domain.services.DefaultResourceBundleService;
 import java.net.MalformedURLException;
 
 /**
@@ -18,7 +18,7 @@ public class CompanyResourceService implements ResourceService {
 
     public static CompanyResourceService init() throws MalformedURLException {
         CompanyResourceService res = new CompanyResourceService();
-        Resource.registerResourceService(res);
+        ResourceHandler.registerResourceService(res);
         return res;
     }
 

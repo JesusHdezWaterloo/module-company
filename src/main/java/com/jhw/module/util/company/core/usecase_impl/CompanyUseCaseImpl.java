@@ -1,6 +1,6 @@
 package com.jhw.module.util.company.core.usecase_impl;
 
-import com.clean.core.app.usecase.DefaultReadWriteUseCase;
+import com.root101.clean.core.app.usecase.DefaultReadWriteUseCase;
 import com.jhw.module.util.company.core.domain.CompanyDomain;
 import com.jhw.module.util.company.core.module.CompanyCoreModule;
 import com.jhw.module.util.company.core.repo_def.CompanyRepo;

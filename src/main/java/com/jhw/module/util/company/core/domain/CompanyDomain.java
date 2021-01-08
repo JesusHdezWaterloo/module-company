@@ -1,7 +1,7 @@
 package com.jhw.module.util.company.core.domain;
 
-import com.jhw.utils.clean.EntityDomainObjectValidated;
-import com.jhw.utils.others.SemanticVersioningModel;
+import com.root101.utils.clean.EntityDomainObjectValidated;
+import com.root101.utils.others.SemanticVersioningModel;
 import javax.validation.constraints.NotEmpty;
 
 /**

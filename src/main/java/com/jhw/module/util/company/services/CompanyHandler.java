@@ -8,7 +8,7 @@ package com.jhw.module.util.company.services;
 import com.jhw.module.util.company.core.domain.CompanyDomain;
 import com.jhw.module.util.company.core.module.CompanyCoreModule;
 import com.jhw.module.util.company.core.usecase_def.CompanyUseCase;
-import com.jhw.utils.others.SemanticVersioningModel;
+import com.root101.utils.others.SemanticVersioningModel;
 import java.awt.Image;
 import javax.swing.ImageIcon;
 
