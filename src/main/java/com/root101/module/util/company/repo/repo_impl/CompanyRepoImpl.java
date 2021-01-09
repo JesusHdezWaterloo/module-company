@@ -20,7 +20,7 @@ import com.root101.clean.core.app.services.NotificationHandler;
 import com.root101.clean.core.app.services.NotificationsGeneralType;
 import com.root101.clean.core.domain.services.ResourceHandler;
 import com.root101.module.util.company.core.domain.CompanyDomain;
-import javax.inject.Inject;
+
 import com.root101.module.util.company.core.repo_def.CompanyRepo;
 import com.root101.repo.json.JACKSONRepoGeneral;
 
