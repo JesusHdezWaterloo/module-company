@@ -22,6 +22,7 @@ import com.root101.clean.swing.app.DefaultAbstractSwingMainModule;
 import com.root101.clean.swing.app.dashboard.DashBoardSimple;
 import com.root101.clean.swing.app.dashboard.DashboardConstants;
 import com.root101.module.util.company.core.module.CompanyCoreModule;
+import com.root101.module.util.company.repo.module.CompanyRepoModule;
 import com.root101.module.util.company.services.CompanyResourceService;
 import com.root101.module.util.company.services.CompanyHandler;
 import com.root101.swing.util.AbstractActionUtils;
@@ -46,7 +47,7 @@ public class CompanySwingModule extends DefaultAbstractSwingMainModule {
         } catch (MalformedURLException ex) {
             ExceptionHandler.handleException(ex);
         }
-        CompanyCoreModule.init();
+        CompanyCoreModule.init(CompanyRepoModule.init());
         return new CompanySwingModule();
     }
 

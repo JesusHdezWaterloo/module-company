@@ -21,7 +21,6 @@ import com.root101.module.util.company.core.domain.CompanyDomain;
 import com.root101.module.util.company.core.module.CompanyCoreModule;
 import com.root101.module.util.company.core.repo_def.CompanyRepo;
 import com.root101.module.util.company.core.usecase_def.CompanyUseCase;
-import javax.inject.Inject;
 
 /**
  *
@@ -38,7 +37,6 @@ public class CompanyUseCaseImpl extends DefaultReadWriteUseCase<CompanyDomain> i
     /**
      * Constructor por defecto, usado par injectar.
      */
-    @Inject
     public CompanyUseCaseImpl() {
         super.setRepo(repo);
     }
