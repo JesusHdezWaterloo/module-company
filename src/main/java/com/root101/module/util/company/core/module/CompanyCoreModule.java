@@ -20,7 +20,10 @@ import com.root101.clean.core.app.modules.AbstractModule;
 import com.root101.clean.core.app.modules.DefaultAbstractModule;
 import com.google.inject.Guice;
 import com.google.inject.Injector;
-import com.root101.module.util.company.repo.module.CompanyRepoModule;
+import com.root101.clean.core.domain.services.ResourceHandler;
+import com.root101.clean.core.exceptions.AlreadyInitModule;
+import com.root101.clean.core.exceptions.NotInitModule;
+import static com.root101.module.util.company.services.ResourceKeys.*;
 
 /**
  *
@@ -35,19 +38,9 @@ public class CompanyCoreModule extends DefaultAbstractModule {
 
     public static CompanyCoreModule getInstance() {
         if (INSTANCE == null) {
-            throw new NullPointerException("El modulo de company no se ha inicializado");
+            throw new NotInitModule(ResourceHandler.getString(KEY_MODULE_NAME_COMPANY));
         }
         return INSTANCE;
-    }
-
-
-    public static CompanyCoreModule init() {
-        if (INSTANCE != null) {
-            return INSTANCE;
-        }
-        INSTANCE = new CompanyCoreModule();
-        INSTANCE.registerModule(CompanyRepoModule.init());
-        return getInstance();
     }
 
     /**
@@ -57,8 +50,10 @@ public class CompanyCoreModule extends DefaultAbstractModule {
      * @return
      * @deprecated
      */
-    @Deprecated
     public static CompanyCoreModule init(AbstractModule repoModule) {
+        if (INSTANCE != null) {
+            throw new AlreadyInitModule(ResourceHandler.getString(KEY_MODULE_NAME_COMPANY));
+        }
         INSTANCE = new CompanyCoreModule();
         INSTANCE.registerModule(repoModule);
         return getInstance();
